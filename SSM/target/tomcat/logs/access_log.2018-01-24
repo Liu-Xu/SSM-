@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:11:52 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:12:00 +0800] "GET /upload.jsp HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:12:39 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:13:10 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:14:14 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:14:21 +0800] "GET /SSM/user/list HTTP/1.1" 200 2201 http-bio-8080-exec-3 1946
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:14:21 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:15:18 +0800] "GET /user/list HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:15:42 +0800] "GET /SSM/user/list HTTP/1.1" 200 2201 http-bio-8080-exec-5 2045
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:15:57 +0800] "GET /SSM/upload.jsp HTTP/1.1" 200 678 http-bio-8080-exec-8 497
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:15:57 +0800] "GET /SSM/js/jquery.min.js HTTP/1.1" 200 97163 http-bio-8080-exec-8 17
+0:0:0:0:0:0:0:1 - - [24/Jan/2018:10:15:57 +0800] "GET /SSM/js/jquery.form.js HTTP/1.1" 200 26755 http-bio-8080-exec-9 16

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jw.mapper.UserMapper">
+	<sql id="query">
+		<where>
+			<if test="name != null and name != ''">
+				and name like '%${name}%'
+			</if>
+			<if test="sex != null and sex != ''">
+				and sex = #{sex}
+			</if>
+		</where>
+	</sql>
+
+	<select id="list" parameterType="User" resultType="User">
+		select * from user
+		<include refid="query"></include>
+		<if test="pageSize != null and pageSize != ''">
+		limit #{beginIndex}, #{pageSize}
+		</if>
+		</select>
+	
+	<insert id="insert" parameterType="User">
+		insert into user(id, name, age, sex) values(
+			UUID(), #{name}, #{age}, #{sex}
+		)
+	</insert>
+	
+	<update id="update" parameterType="User">
+		update user set name = #{name},
+		age = #{age},
+		sex = #{sex}
+		where id = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="java.lang.String">
+		delete from user where id = #{id}
+	</delete>
+	
+	<select id="get" parameterType="java.lang.String" resultType="User">
+		select * from user where id = #{id}
+	</select>
+	
+	<select id="count" parameterType="User" resultType="java.lang.Integer">
+		select count(*) from user
+		<include refid="query"></include>
+	</select>
+</mapper>
